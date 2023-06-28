@@ -1,0 +1,9 @@
+@media only screen and (max-width:800px){
+    .page__cards{
+        flex-direction: column;
+    }
+
+}
+.card{
+    width: 97%;
+}
