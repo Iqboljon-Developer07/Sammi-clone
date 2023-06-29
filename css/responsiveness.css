@@ -139,7 +139,7 @@
 }
 @media (max-width:690px) {
     .h-btn-info{
-        display: none;
+        display: none !important;
     }
     .header-links button{
         color: var(--clr-white);
@@ -150,7 +150,7 @@
         font-size: .8rem;
     }
     .exit-icon{
-        display: flex;
+        display: flex !important;
     }
     .bx-envelope{ /* maktub icon */
         display: none;

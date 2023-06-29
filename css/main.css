@@ -36,7 +36,7 @@
     --headerBtn-light-bccolor:#9AE6B4;
     --nav-hover-clr:rgb(40, 40, 40);
     --clr-black:white;
-    --clr-white:var(--clr-black)
+    --clr-white:var(--clr-black);
     --mern-box-shadow:0 10px 30px 6px rgb(0, 0, 0);
     --mern-back-icon: rgba(37, 37, 41, 0.720);
     --mern-courses-img:rgba(255, 255, 255, 0.280);
@@ -110,6 +110,8 @@ body{
             color: var(--clr-black);
             transition: .25s;
             cursor: pointer;
+            text-align: center !important;
+            line-height: 42px !important;
         }
         .menu:hover{
             background-color: var(--nav-hover-clr);
@@ -151,7 +153,7 @@ body{
             background-color: rgba(0, 0, 0, 0.030);
         }
         .exit-icon{
-            display: none;
+            display: none !important;
         }
         .header-links button{
             padding: .44rem 1rem;
@@ -159,15 +161,14 @@ body{
             border: .09rem solid var(--headerBtn-light-bccolor);
             color: var(--headerBtn-light-bccolor);
             border-radius: 4px;
-            font-size: 1.2rem;
-            font-weight: 550;
+            font-size: 1.2rem !important;
+            font-weight: 600 !important;
             cursor: pointer;
             transition: .25s;
         }
         .header-links button a{
             text-decoration: none;
             color: var(--headerBtn-light-bccolor);
-
         }
         .header-links button:hover{
             background-color: #00ff8019;

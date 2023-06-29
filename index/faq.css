@@ -80,6 +80,6 @@
     height: auto;
     margin: 2% auto;
     margin-top: 1%;
-    font-size: 17px
-    
+    font-size: 17px;
+    overflow: hidden;
 }
