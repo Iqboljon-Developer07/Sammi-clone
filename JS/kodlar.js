@@ -8,6 +8,7 @@ const Headermenu = document.querySelector('.menu');
 const nav = document.getElementById('nav');
 
 const body = document.getElementById('body');
+const body__main = document.querySelector('.body__main');
 Headermenu.onclick = () =>{
     nav.classList.toggle('show-hide-nav')
 }
@@ -21,6 +22,9 @@ nightIcon.onclick = () =>{
     nav.classList.toggle('header-nav-night')
    
     body.classList.toggle('body-night');
+    body__main.classList.toggle('color-white');
+    body__main.classList.toggle('header-nav-night');
+
 };
 
 lightIcon.onclick = () =>{
@@ -32,4 +36,6 @@ lightIcon.onclick = () =>{
     nav.classList.toggle('header-nav-night')
   
     body.classList.toggle('body-night');
-}
+    body__main.classList.toggle('color-white');
+    body__main.classList.toggle('header-nav-night');
+};

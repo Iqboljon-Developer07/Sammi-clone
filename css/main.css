@@ -17,6 +17,7 @@
     --body-back-clr-light:white;
     
     --mern-box-shadow:0 10px 30px 6px rgb(195, 195, 195);
+    --kodlar-card-bxShadow:rgb(224, 224, 224);
     --mern-bc-color:transparent;
     --mern-back-icon:rgba(0, 0, 0, 0.028);
     
@@ -44,6 +45,7 @@
     --mern-bc-color:#2d3748;
     --mern-info-about-bccolor:rgba(0, 0, 0, 0.302);
     --sammi-services-bc-color:#2D3748;
+    --kodlar-card-bxShadow: transparent;
 }   
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap');
