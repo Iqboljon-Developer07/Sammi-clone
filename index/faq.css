@@ -101,3 +101,10 @@
     transform: scaleY(0);
     transform-origin: top;
 }
+@media only screen and (max-width:1270px){
+    .body__main{
+        width: 95%;
+        padding: 0;
+        margin: 0 auto;
+    }
+}
