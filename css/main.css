@@ -224,7 +224,7 @@ body{
 }
 .navigation-content.hello{
     /* background-color: rgba(0, 0, 0, 0.024); */
-    background-color: rgba(255, 255, 255, 0.068);
+    background-color: rgba(128, 128, 128, 0.1);
 }
 .navigation-content:hover{
     background-color: var(--nav-hover-clr);
