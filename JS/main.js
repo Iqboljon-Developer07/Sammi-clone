@@ -29,6 +29,10 @@ const sammiInvation = document.querySelector('.invations');
 const sammiForm = document.querySelector('.sammi-form');
 const sammiFormC = document.querySelector('.sammi-form-c');
 const sammiFormInput = document.querySelector('.sammi-form input');
+
+const navigationContents = document.querySelectorAll('.navigation-content');
+navigationContents[0].classList.add('hello');
+
 sammiForm.addEventListener('submit', (i)=>{
     i.preventDefault();
     sammiFormInput.disabled = true;

@@ -10,6 +10,8 @@ const nav = document.getElementById('nav');
 const body = document.getElementById('body');
 
 const bodyMain = document.querySelector('.body__main');
+const navigationContents = document.querySelectorAll('.navigation-content');
+navigationContents[1].classList.add('hello');
 Headermenu.onclick = () =>{
     nav.classList.toggle('show-hide-nav')
 }

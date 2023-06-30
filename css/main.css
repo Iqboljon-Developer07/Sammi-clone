@@ -27,6 +27,8 @@
     --mern-info-about-bccolor:transparent;
     --mern-info-about-bccolor2:transparent;
     --sammi-services-bc-color:#E3E8F0;
+    --faq-q-bccolor:#EDF2F7;
+
 }
 
 .body-night{
@@ -46,6 +48,7 @@
     --mern-info-about-bccolor:rgba(0, 0, 0, 0.302);
     --sammi-services-bc-color:#2D3748;
     --kodlar-card-bxShadow: transparent;
+    --faq-q-bccolor:#4A5568;
 }   
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap');
@@ -219,6 +222,9 @@ body{
     transition: .22s;
     text-decoration: none;
     color: var(--clr-black);
+}
+.navigation-content.hello{
+    background-color: rgb(244, 244, 244);
 }
 .navigation-content:hover{
     background-color: var(--nav-hover-clr);
