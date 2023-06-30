@@ -28,7 +28,6 @@
     --mern-info-about-bccolor2:transparent;
     --sammi-services-bc-color:#E3E8F0;
     --faq-q-bccolor:#EDF2F7;
-
 }
 
 .body-night{
@@ -224,7 +223,8 @@ body{
     color: var(--clr-black);
 }
 .navigation-content.hello{
-    background-color: rgb(244, 244, 244);
+    /* background-color: rgba(0, 0, 0, 0.024); */
+    background-color: rgba(255, 255, 255, 0.068);
 }
 .navigation-content:hover{
     background-color: var(--nav-hover-clr);
