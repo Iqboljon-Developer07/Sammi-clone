@@ -38,6 +38,7 @@
     --headerBtn-light-bccolor:#9AE6B4;
     --nav-hover-clr:rgb(40, 40, 40);
     --clr-black:white;
+    --clr-white:black !important;
     --clr-white:var(--clr-black);
     --mern-box-shadow:0 10px 30px 6px rgb(0, 0, 0);
     --mern-back-icon: rgba(37, 37, 41, 0.720);
@@ -48,6 +49,7 @@
     --sammi-services-bc-color:#2D3748;
     --kodlar-card-bxShadow: transparent;
     --faq-q-bccolor:#4A5568;
+    --body-back-clr-light:var(--body-back-clr-night);
 }   
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap');
@@ -265,6 +267,7 @@ body{
     align-items: start;
     position: relative;
     color: var(--clr-black);
+    z-index: 100;
 }
 .mern a{
     text-decoration: none;
