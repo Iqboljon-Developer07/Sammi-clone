@@ -73,6 +73,7 @@
 .card__title i{
     width: 22px;
     height: 22px;
+    flex-shrink: 0;
     border: 2px solid var(--clr-black);
     color: var(--clr-black);
     border-radius: 50%;
@@ -106,5 +107,21 @@
         width: 95%;
         padding: 0;
         margin: 0 auto;
+    }
+}
+@media (max-width:690px) {
+    #body__mainimg{
+        right: -30%;
+        transform: scale(.8);
+    }
+}
+@media (max-width:556px) {
+    #body__mainimg{
+        right: -54%;
+    }
+}
+@media (max-width:420px) {
+    #body__mainimg{
+        z-index: -1;
     }
 }

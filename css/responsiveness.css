@@ -237,5 +237,14 @@
     .sammi-info-about > p{
         font-size: 1.2rem;
     }
+    .popular-courses{
+        width: 100%;
+    }
+    .popular-course{
+        padding: 1rem;
+    }
+    .popular-courses-c{
+        grid-template-columns: repeat(auto-fit , minmax(302px, 2fr));
+    }
 }
 /* ---- Header ---- /*/

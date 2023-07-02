@@ -10,6 +10,12 @@
     font-family: sans-serif;
     color: #38a169;
 }
+.kontakt-box{
+    width: 100% !important;
+}
+svg{
+    color: var(--mern-courses-img);
+}
 .platformaga-savollar{
     font-size: 1.1rem;
     font-family: sans-serif;
@@ -20,9 +26,10 @@
     width: 100%;
     height: 81%;
     border-radius: 7px;
-    box-shadow: 1px 1px 2px 1px rgb(196, 196, 196);
+    border: 1px solid var(--mern-border-color);
     display: flex;
     justify-content: space-between;
+    background-color: var(--mern-bc-color);
 }
 .kontakt-royhat-box{
     width: 55%;
@@ -81,12 +88,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f7fafc;
+    /* background-color: #f7fafc; */
     width: 100%;
     height: 80px;
     margin-top: 12%;
     position: absolute;
     padding-right: 4%;
+    gap: 1rem;
 }
 .kontakt-huquqlar-hioyalangan1{
     font-size: 16px;
@@ -112,5 +120,9 @@
     border-radius: 50%;
     cursor: pointer;
 }
-
-
+.huquqlar-hioyalangan-icons > div{
+    color: #000;
+}
+.color-white{
+    color: white !important;
+}
