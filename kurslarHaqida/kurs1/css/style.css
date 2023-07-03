@@ -15,7 +15,7 @@
 }
 .library-info{
     width: 98%;
-    height: 260px;
+    height: 312px;
     border: .1px solid var(--mern-border-color);
     border-radius: 8px;
     align-items: start !important;
