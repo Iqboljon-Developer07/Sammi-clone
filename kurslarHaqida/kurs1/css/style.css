@@ -121,6 +121,11 @@
 .additional-infos-types{
     justify-content: space-between !important;   
 }
+.additional-infos-types a{
+    width: calc(100% / 4);
+    text-decoration: none;
+    color: var(--clr-black);
+}
 .additional-infos-types div{
     width: calc(100% / 4);
     padding: 1rem 0;
