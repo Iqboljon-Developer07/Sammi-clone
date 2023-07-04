@@ -40,3 +40,22 @@ lightIcon.onclick = () =>{
     body.classList.toggle('body-night');
     body.classList.toggle('header-nav-night');
 };
+
+const form_swritcher = document.querySelector('.form-switcher');
+const form_swritcher2 = document.querySelector('.form-switcher2');
+
+const signForm = document.querySelector('.sign-container-form');
+const signForm2 = document.querySelector('.sign-container-form2');
+
+form_swritcher.onclick = () =>{
+    signForm.classList.remove('bor');
+    signForm.classList.add('yoq');
+    signForm2.classList.remove('yoq');
+    signForm2.classList.add('bor');
+}
+form_swritcher2.onclick = () =>{
+    signForm2.classList.remove('bor');
+    signForm2.classList.add('yoq');
+    signForm.classList.remove('yoq');
+    signForm.classList.add('bor');
+}
