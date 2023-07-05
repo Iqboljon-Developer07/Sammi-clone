@@ -32,6 +32,13 @@ nightIcon.onclick = () =>{
     kontaktBox.classList.toggle('color-white');
     kontaktBox.classList.toggle('header-nav-night');
     kontaktHuquqlarHioyalangan.classList.toggle('color-white')
+
+    let night = 'night';
+    let night_JSON = JSON.stringify(night);
+    localStorage.setItem('night_Mode', night_JSON);
+
+    let night_Check = localStorage.getItem('night_Mode');
+    let night_Check_Original = JSON.parse(night_Check);
 };
 let night_Check = localStorage.getItem('night_Mode');
 let night_Check_Original = JSON.parse(night_Check);

@@ -84,6 +84,13 @@ lightIcon.onclick = () =>{
     bodyMain.classList.toggle('header-nav-night')
 
     localStorage.removeItem('night_Mode');
+
+    let night = 'night';
+    let night_JSON = JSON.stringify(night);
+    localStorage.setItem('night_Mode', night_JSON);
+
+    let night_Check = localStorage.getItem('night_Mode');
+    let night_Check_Original = JSON.parse(night_Check);
 }
 // for(let i = 0;i < questionMain.length;i++){
 //     questionMain[i].addEventListener('click',()=>{
