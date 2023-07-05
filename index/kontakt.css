@@ -10,6 +10,21 @@
     font-family: sans-serif;
     color: #38a169;
 }
+input{
+    outline-color: green !important;
+    transition: 80ms;
+    background-color: transparent;
+}
+input:focus,
+input:active{
+    border: none !important;
+    border-color: transparent;
+}
+textarea{
+    outline-color: green;
+    background-color: transparent;
+    display: block;
+}
 .kontakt-box{
     width: 100% !important;
 }

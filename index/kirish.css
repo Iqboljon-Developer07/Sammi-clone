@@ -150,9 +150,56 @@
 .sign-container-form2{
     display: none !important;
 }
-.bor{
-    display: flex !important;
-}
 .yoq{
     display: none !important;
+}
+.bor{
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+
+.form-input1-1{
+    outline-color: red !important;
+    border: 2px solid red;
+    position: relative;
+}
+.form-input2-2{
+    border: 2px solid red;
+    outline-color: red !important;
+}
+.warning{
+    width: 100%;
+    display: flex;
+    align-items: start !important;
+    padding-left: 10px;
+    color: red;
+    height: 10px;
+    transform: translateY(-14px);
+    display: none;
+}
+.password-inputs2{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+.form2-warning-text2{
+    width: 100%;
+    display: flex;
+    justify-content: start !important;
+    align-items: start !important;
+    color: red;
+    transform: translateX(10px);
+}
+.form2-warning-text2-2{
+    opacity: 0;
+}
+.container-texts{
+    width: 200%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between !important;
+    display: none;
+}
+.container-texts *{
+    width: 50%;
 }
