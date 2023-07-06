@@ -33,6 +33,11 @@ const sammiFormInput = document.querySelector('.sammi-form input');
 const navigationContents = document.querySelectorAll('.navigation-content');
 navigationContents[0].classList.add('hello');
 
+const kirishBtn = document.querySelector('.kirish_Btn1');
+kirishBtn.onclick = () =>{
+    kirishBtn.classList.add('kirish_Btn2');
+}
+
 sammiForm.addEventListener('submit', (i)=>{
     i.preventDefault();
     sammiFormInput.disabled = true;

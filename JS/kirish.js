@@ -10,6 +10,9 @@ const nav = document.getElementById('nav');
 const body = document.getElementById('body');
 
 const navigationContents = document.querySelectorAll('.navigation-content');
+
+let users = {};
+
 for(let i = 0;i < navigationContents.length; i++){
     navigationContents[i].classList.remove('active')
 }
@@ -27,8 +30,28 @@ nightIcon.onclick = () =>{
    
     body.classList.toggle('body-night');
     body.classList.toggle('header-nav-night');
-};
 
+    let night = 'night';
+    let night_JSON = JSON.stringify(night);
+    localStorage.setItem('night_Mode', night_JSON);
+
+    let night_Check = localStorage.getItem('night_Mode');
+    let night_Check_Original = JSON.parse(night_Check);
+};
+let night_Check = localStorage.getItem('night_Mode');
+let night_Check_Original = JSON.parse(night_Check);
+
+if (night_Check_Original == 'night'){
+    nightIcon.classList.toggle('light-night');
+    lightIcon.classList.toggle('night-light');
+    header.classList.toggle('header-nav-night');
+    headerLogoImg.classList.toggle('header-logo-image2');
+
+    nav.classList.toggle('header-nav-night')
+   
+    body.classList.toggle('body-night');
+    body.classList.toggle('header-nav-night');
+};
 lightIcon.onclick = () =>{
     nightIcon.classList.toggle('light-night');
     lightIcon.classList.toggle('night-light');
@@ -39,6 +62,8 @@ lightIcon.onclick = () =>{
   
     body.classList.toggle('body-night');
     body.classList.toggle('header-nav-night');
+
+    localStorage.removeItem('night_Mode');
 };
 
 const form_swritcher = document.querySelector('.form-switcher');
@@ -74,9 +99,17 @@ form1.addEventListener('submit', (i)=>{
         formInput1.classList.add('form-input1-1');
         formWarningText[0].classList.add('bor');
     }
+    else{
+        formInput1.classList.remove('form-input1-1');
+        formWarningText[0].classList.remove('bor');
+    }
     if (formInput2.value ==''){
         formInput2.classList.add('form-input2-2');
         formWarningText[1].classList.add('bor');
+    }
+    else{
+        formInput2.classList.remove('form-input2-2');
+        formWarningText[1].classList.remove('bor');
     }
 });
 
@@ -87,6 +120,7 @@ const form2Input3 = document.querySelector('.form2-input3');
 const form2WarningText = document.querySelectorAll('.form2-warning-text2-2')
 
 const containerText = document.querySelector('.container-texts');
+let userCount = 0
 form2WarningText[0].classList.add('yoq');
 form2.addEventListener('submit',(i)=>{
     i.preventDefault();
@@ -94,16 +128,33 @@ form2.addEventListener('submit',(i)=>{
         form2Input1.classList.add('form-input1-1');
         form2WarningText[0].classList.add('bor');
     }
+    else{
+        form2Input1.classList.remove('form-input1-1');
+        form2WarningText[0].classList.remove('bor');
+    }
     if(form2Input2.value == ''){
         form2Input2.classList.add('form-input1-1');
         form2WarningText[1].classList.add('bor');
         containerText.classList.add('bor')
+    }
+    else{
+        form2Input2.classList.remove('form-input1-1');
+        form2WarningText[1].classList.remove('bor');
+        containerText.classList.remove('bor')
     }
     if(form2Input3.value == ''){
         form2Input3.classList.add('form-input1-1');
         form2WarningText[2].classList.add('bor');
         containerText.classList.add('bor')
     }
-})
+    else{
+        form2Input3.classList.remove('form-input1-1');
+        form2WarningText[2].classList.remove('bor');
+        containerText.classList.remove('bor')
+    }
 
-console.log(form2WarningText);
+
+    userCount++;
+    users[`users${userCount}`] = 'hello';
+    console.log(users);
+})
