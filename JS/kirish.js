@@ -118,7 +118,7 @@ const form2Input3 = document.querySelector('.form2-input3');
 const form2WarningText = document.querySelectorAll('.form2-warning-text2-2')
 
 const containerText = document.querySelector('.container-texts');
-let userCount = 0
+var userCount = 0
 form2WarningText[0].classList.add('yoq');
 form2.addEventListener('submit',(i)=>{
     var o = 0
@@ -162,9 +162,7 @@ form2.addEventListener('submit',(i)=>{
             userCount++;
             let userData = {};
             userData[`userEmail${userCount}`] = form2Input1.value;
-            userData[`userPassword${userCount}`] = form2Input1.value;
-            userData[`userEmail${userCount}`] = form2Input1.value;
-        
+            userData[`userPassword${userCount}`] = form2Input2.value;
 
             let users_Original = localStorage.getItem('users');
             users_Original = JSON.parse(users_Original);
@@ -185,7 +183,18 @@ form1.addEventListener('submit', (k)=>{
         alert('Formani To\'ldiring!');
     };
     if(formInput1.value != '' && formInput2.value != ''){
-        let usersData = localStorage.getItem('users');
-        console.log(usersData);
+        var usersData = localStorage.getItem('users');
+        usersData = JSON.parse(usersData);
+        for (let i = 0;i < usersData.length;i++){
+            let email = usersData[i][`userEmail${i + 1}`];
+            let password = usersData[i][`userPassword${i + 1}`];
+
+            if (formInput1.value == email && formInput2.value == password){
+                location.replace('./settings.html');
+            }
+        }
+        setTimeout(() => {
+            alert('Bunday foydalanuvchi topilmadi');
+        }, 400);
     };
 })
