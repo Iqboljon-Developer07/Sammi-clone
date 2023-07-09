@@ -14,6 +14,7 @@ input{
     outline-color: green !important;
     transition: 80ms;
     background-color: transparent;
+    color: var(--clr-black);
 }
 input:focus,
 input:active{
@@ -24,6 +25,7 @@ textarea{
     outline-color: green;
     background-color: transparent;
     display: block;
+    color: var(--clr-black);
 }
 .kontakt-box{
     width: 100% !important;

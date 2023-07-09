@@ -11,8 +11,6 @@ const body = document.getElementById('body');
 
 const navigationContents = document.querySelectorAll('.navigation-content');
 
-let users = {};
-
 for(let i = 0;i < navigationContents.length; i++){
     navigationContents[i].classList.remove('active')
 }
@@ -123,6 +121,7 @@ const containerText = document.querySelector('.container-texts');
 let userCount = 0
 form2WarningText[0].classList.add('yoq');
 form2.addEventListener('submit',(i)=>{
+    var o = 0
     i.preventDefault();
     if(form2Input1.value == ''){
         form2Input1.classList.add('form-input1-1');
@@ -131,6 +130,7 @@ form2.addEventListener('submit',(i)=>{
     else{
         form2Input1.classList.remove('form-input1-1');
         form2WarningText[0].classList.remove('bor');
+        o++;
     }
     if(form2Input2.value == ''){
         form2Input2.classList.add('form-input1-1');
@@ -141,6 +141,7 @@ form2.addEventListener('submit',(i)=>{
         form2Input2.classList.remove('form-input1-1');
         form2WarningText[1].classList.remove('bor');
         containerText.classList.remove('bor')
+        o++;
     }
     if(form2Input3.value == ''){
         form2Input3.classList.add('form-input1-1');
@@ -151,10 +152,40 @@ form2.addEventListener('submit',(i)=>{
         form2Input3.classList.remove('form-input1-1');
         form2WarningText[2].classList.remove('bor');
         containerText.classList.remove('bor')
+        o++
     }
+    if (form2Input2.value != form2Input3.value) {
+        alert("Har ikki parol birhil bo'lsin!")
+    }
+    else{
+        if (o == 3) {
+            userCount++;
+            let userData = {};
+            userData[`userEmail${userCount}`] = form2Input1.value;
+            userData[`userPassword${userCount}`] = form2Input1.value;
+            userData[`userEmail${userCount}`] = form2Input1.value;
+        
 
+            let users_Original = localStorage.getItem('users');
+            users_Original = JSON.parse(users_Original);
+            users_Original.push(userData);
 
-    userCount++;
-    users[`users${userCount}`] = 'hello';
-    console.log(users);
+            console.log(users_Original);
+
+            users_Original = JSON.stringify(users_Original);
+            localStorage.setItem('users', users_Original);
+        }
+    }
+})
+
+form1.addEventListener('submit', (k)=>{
+    k.preventDefault();
+
+    if(formInput1.value == '' || formInput2.value == ''){
+        alert('Formani To\'ldiring!');
+    };
+    if(formInput1.value != '' && formInput2.value != ''){
+        let usersData = localStorage.getItem('users');
+        console.log(usersData);
+    };
 })

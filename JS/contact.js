@@ -19,7 +19,7 @@ navigationContents[3].classList.add('hello');
 Headermenu.onclick = () =>{
     nav.classList.toggle('show-hide-nav')
 }
-
+console.log(localStorage.getItem('users'));
 nightIcon.onclick = () =>{
     nightIcon.classList.toggle('light-night');
     lightIcon.classList.toggle('night-light');

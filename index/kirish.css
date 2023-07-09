@@ -183,6 +183,7 @@
 .password-inputs2{
     display: grid;
     grid-template-columns: 2fr 2fr;
+    width: 100%;
 }
 .form2-warning-text2{
     width: 100%;
