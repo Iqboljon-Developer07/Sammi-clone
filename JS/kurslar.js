@@ -28,8 +28,31 @@ nightIcon.onclick = () =>{
 
     bodyMain.classList.toggle('color-white');
     bodyMain.classList.toggle('header-nav-night');
+
+    let night = 'night';
+    let night_JSON = JSON.stringify(night);
+    localStorage.setItem('night_Mode', night_JSON);
+
+    let night_Check = localStorage.getItem('night_Mode');
+    let night_Check_Original = JSON.parse(night_Check);
 };
 
+let night_Check = localStorage.getItem('night_Mode');
+let night_Check_Original = JSON.parse(night_Check);
+
+if (night_Check_Original == 'night'){
+    nightIcon.classList.toggle('light-night');
+    lightIcon.classList.toggle('night-light');
+    header.classList.toggle('header-nav-night');
+    headerLogoImg.classList.toggle('header-logo-image2');
+
+    nav.classList.toggle('header-nav-night')
+   
+    body.classList.toggle('body-night');
+
+    bodyMain.classList.toggle('color-white');
+    bodyMain.classList.toggle('header-nav-night');
+}
 lightIcon.onclick = () =>{
     nightIcon.classList.toggle('light-night');
     lightIcon.classList.toggle('night-light');

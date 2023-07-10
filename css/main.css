@@ -29,7 +29,20 @@
     --sammi-services-bc-color:#E3E8F0;
     --faq-q-bccolor:#EDF2F7;
 }
+.kirish_Btn2{
+    animation: chiqib-tushish 32k0ms linear 1 !important;
+}
+@keyframes chiqib-tushish {
+    0%{
 
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
 .body-night{
     background-color: #1A202C;;
 }
