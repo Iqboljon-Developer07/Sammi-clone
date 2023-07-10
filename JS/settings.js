@@ -9,6 +9,28 @@ const nav = document.getElementById('nav');
 
 const body = document.getElementById('body');
 const navigationContents = document.querySelectorAll('.navigation-content');
+
+const mainContainer = document.querySelector('.main-container');
+
+const courses = document.querySelectorAll('.settings-container');
+const navigations = document.querySelectorAll('.s-c-navigation');
+
+for (let i = 0;i<courses.length;i++){
+    navigations[i].addEventListener('click',()=>{
+        for (let j = 0; j < courses.length; j++) {
+            if(i == j){
+                courses[j].classList.add('bor');
+                courses[j].classList.remove('yoq');
+            }            
+            else{
+                courses[j].classList.add('yoq');
+                courses[j].classList.remove('bor');
+
+            }
+        }
+    })
+}
+
 Headermenu.onclick = () =>{
     nav.classList.toggle('show-hide-nav');
 }
@@ -26,8 +48,8 @@ nightIcon.onclick = () =>{
     let night_JSON = JSON.stringify(night);
     localStorage.setItem('night_Mode', night_JSON);
 
-    // let night_Check = localStorage.getItem('night_Mode');
-    // let night_Check_Original = JSON.parse(night_Check);
+
+    mainContainer.classList.toggle('header-nav-night')
 };
 let night_Check = localStorage.getItem('night_Mode');
 let night_Check_Original = JSON.parse(night_Check);
@@ -41,6 +63,8 @@ if (night_Check_Original == 'night'){
     nav.classList.toggle('header-nav-night')
    
     body.classList.toggle('body-night');
+
+    mainContainer.classList.toggle('header-nav-night')
 }
 lightIcon.onclick = () =>{
     nightIcon.classList.toggle('light-night');
@@ -53,4 +77,6 @@ lightIcon.onclick = () =>{
     body.classList.toggle('body-night');
 
     localStorage.removeItem('night_Mode');
+
+    mainContainer.classList.toggle('header-nav-night')
 }
