@@ -33,6 +33,11 @@ const sammiFormInput = document.querySelector('.sammi-form input');
 const navigationContents = document.querySelectorAll('.navigation-content');
 navigationContents[0].classList.add('hello');
 
+const kirishBtn = document.querySelector('.kirish_Btn1');
+kirishBtn.onclick = () =>{
+    kirishBtn.classList.add('kirish_Btn2');
+}
+
 sammiForm.addEventListener('submit', (i)=>{
     i.preventDefault();
     sammiFormInput.disabled = true;
@@ -47,6 +52,45 @@ Headermenu.onclick = () =>{
 }
 
 nightIcon.onclick = () =>{
+    nightIcon.classList.toggle('light-night');
+    lightIcon.classList.toggle('night-light');
+    header.classList.toggle('header-nav-night');
+    headerLogoImg.classList.toggle('header-logo-image2');
+
+    nav.classList.toggle('header-nav-night')
+   
+    body.classList.toggle('body-night');
+   
+    mernAlert.classList.toggle('header-nav-night');
+    
+    sammiCourses.classList.toggle('header-nav-night');
+
+    sammiServices.classList.toggle('header-nav-night')
+    sammiServicesArows[0].classList.toggle('sammi-service-arrow2')
+    sammiServicesArows[1].classList.toggle('sammi-service-arrow2')
+    sammiServicesLogo[0].classList.toggle('sammi-service-arrow2');
+    sammiServicesLogo[1].classList.toggle('sammi-service-arrow2');
+    sammiServicesLogo[2].classList.toggle('sammi-service-arrow2');
+
+    sammiNewCourses.classList.toggle('header-nav-night')
+
+    sammiPopularCourses.classList.toggle('header-nav-night')
+
+    sammiInvation.classList.toggle('header-nav-night');
+
+    sammiFormC.classList.toggle('header-nav-night');
+
+    let night = 'night';
+    let night_JSON = JSON.stringify(night);
+    localStorage.setItem('night_Mode', night_JSON);
+
+    let night_Check = localStorage.getItem('night_Mode');
+    let night_Check_Original = JSON.parse(night_Check);
+}
+let night_Check = localStorage.getItem('night_Mode');
+let night_Check_Original = JSON.parse(night_Check);
+
+if (night_Check_Original == 'night'){
     nightIcon.classList.toggle('light-night');
     lightIcon.classList.toggle('night-light');
     header.classList.toggle('header-nav-night');
@@ -103,4 +147,6 @@ lightIcon.onclick = () =>{
     sammiInvation.classList.toggle('header-nav-night');
 
     sammiFormC.classList.toggle('header-nav-night');
+
+    localStorage.removeItem('night_Mode');
 }
