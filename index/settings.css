@@ -20,8 +20,13 @@
     border-bottom: 2px solid rgba(116, 116, 116, 0.14);
     padding-bottom: 10px;
 }
-.s-c-navigations div.active{
+.s-c-navigation div.active{
     border-color: var(--headerBtn-light-bccolor);
+    border-width: 3.2px;
+    color: #2F855A !important;
+}
+.active{
+    border-color: var(--headerBtn-light-bccolor) !important;
     border-width: 3.2px;
     color: #2F855A !important;
 }
@@ -82,10 +87,15 @@ svg{
     outline: none;
     background-color: transparent;
     transition: 120ms;
+    color: var(--clr-black);
 }
 .profile-form-information textarea:focus{
     border-width: 2.8px;
     border-color: #2F855A;
+}
+.settings-courses-indicator-heading{
+    margin-left: 40px;
+    color: var(--clr-black);
 }
 button{
     grid-column-start: 1;
@@ -99,10 +109,47 @@ button{
 }
 .bor{
     display: block;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
 }
 .yoq{
     display: none;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+}
+#last-settings{
+    color: var(--clr-black);
+}
+.last-settings-form{
+    padding: 0 4%;
+    display: grid;
+    gap: 10px;
+}
+.new-password-form{
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* padding: 10px; */
+}
+.new-password-form input{
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid var(--mern-border-color);
+    outline: none;
+    color: var(--clr-black);
+    font-size: 1rem;
+    padding-left: 10px;
+    transition: 120ms;
+    border-radius: 6px;
+}
+.new-password-form input:focus{
+    border-width: 2px;
+    border-color: green;
+}
+.new-password-form button{
+    width: 120px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #4ecd8e;
+    border: 3.2px solid #2F855A;
 }

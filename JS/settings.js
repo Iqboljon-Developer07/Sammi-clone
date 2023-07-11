@@ -13,7 +13,7 @@ const navigationContents = document.querySelectorAll('.navigation-content');
 const mainContainer = document.querySelector('.main-container');
 
 const courses = document.querySelectorAll('.settings-container');
-const navigations = document.querySelectorAll('.s-c-navigation');
+let navigations = document.querySelectorAll('.s-c-navigation');
 
 for (let i = 0;i<courses.length;i++){
     navigations[i].addEventListener('click',()=>{
@@ -21,11 +21,84 @@ for (let i = 0;i<courses.length;i++){
             if(i == j){
                 courses[j].classList.add('bor');
                 courses[j].classList.remove('yoq');
+                navigations[j].classList.add('active');
+                if (j == 1){
+                    navigations2[1].classList.add('active');
+                    console.log('for 1 navigation2');
+                }
+                if (j == 2) {
+                    navigations3[2].classList.add('active');
+                    console.log('for 1 navigation3');
+                }
             }            
             else{
                 courses[j].classList.add('yoq');
                 courses[j].classList.remove('bor');
+                navigations[j].classList.remove('active');
+                navigations2[j].classList.remove('active');
+                navigations3[j].classList.remove('active');
+            }
+        }
+    })
+}
+const navigations2 = document.querySelectorAll('.s-c-navigation2');
 
+let profileUserName = document.querySelector('.profileUserName');
+let user_Name = localStorage.getItem('user_Name');
+user_Name = JSON.parse(user_Name);
+profileUserName.innerHTML = user_Name;
+
+for (let i = 0;i<courses.length;i++){
+    navigations2[i].addEventListener('click',()=>{
+        for (let j = 0; j < courses.length; j++) {
+            if(i == j){
+                courses[j].classList.add('bor');
+                courses[j].classList.remove('yoq');
+                navigations2[j].classList.add('active');
+                if (j == 0){
+                    navigations[0].classList.add('active');
+                    console.log('for 2 navigation1');
+                }
+                if (j == 2) {
+                    navigations3[2].classList.add('active');
+                    console.log('for 2 navigation3');
+                }
+            }            
+            else{
+                courses[j].classList.add('yoq');
+                courses[j].classList.remove('bor');
+                navigations2[j].classList.remove('active');
+                navigations[j].classList.remove('active');
+                navigations3[j].classList.remove('active');
+            }
+        }
+    })
+}
+const navigations3 = document.querySelectorAll('.s-c-navigation3');
+
+for (let i = 0;i<courses.length;i++){
+    navigations3[i].addEventListener('click',()=>{
+        for (let j = 0; j < courses.length; j++) {
+            if(i == j){
+                courses[j].classList.add('bor');
+                courses[j].classList.remove('yoq');
+                navigations3[j].classList.add('active');
+                console.log(j);
+                if (j == 0){
+                    navigations[0].classList.add('active');
+                    console.log('for 3 navigation2');
+                }
+                if (j == 1) {
+                    navigations2[1].classList.add('active');
+                    console.log('for 3 navigation1');
+                }
+            }            
+            else{
+                courses[j].classList.add('yoq');
+                courses[j].classList.remove('bor');
+                navigations3[j].classList.remove('active');
+                navigations[j].classList.remove('active');
+                navigations2[j].classList.remove('active');
             }
         }
     })
@@ -47,7 +120,6 @@ nightIcon.onclick = () =>{
     let night = 'night';
     let night_JSON = JSON.stringify(night);
     localStorage.setItem('night_Mode', night_JSON);
-
 
     mainContainer.classList.toggle('header-nav-night')
 };

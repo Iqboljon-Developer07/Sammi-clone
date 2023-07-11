@@ -111,14 +111,16 @@ form1.addEventListener('submit', (i)=>{
     }
 });
 
-const form2Input1 = document.querySelector('.form2-input1');
-const form2Input2 = document.querySelector('.form2-input2');
-const form2Input3 = document.querySelector('.form2-input3');
+let form2Input1 = document.querySelector('.form2-input1');
+let form2Input2 = document.querySelector('.form2-input2');
+let form2Input3 = document.querySelector('.form2-input3');
 
 const form2WarningText = document.querySelectorAll('.form2-warning-text2-2')
 
 const containerText = document.querySelector('.container-texts');
-var userCount = 0
+let userCount = localStorage.getItem('user_Count');
+userCount = JSON.parse(userCount);
+
 form2WarningText[0].classList.add('yoq');
 form2.addEventListener('submit',(i)=>{
     var o = 0
@@ -164,14 +166,26 @@ form2.addEventListener('submit',(i)=>{
             userData[`userEmail${userCount}`] = form2Input1.value;
             userData[`userPassword${userCount}`] = form2Input2.value;
 
+            form2Input1 = JSON.stringify(form2Input1.value);
+            localStorage.setItem('user_Name', form2Input1);
+
             let users_Original = localStorage.getItem('users');
             users_Original = JSON.parse(users_Original);
             users_Original.push(userData);
+            
+            alert("Ro'yhatdan o'ttingiz!");
+            form2Input1.value = '';
+            form2Input2.value = '';
+            form2Input3.value = '';
 
             console.log(users_Original);
 
             users_Original = JSON.stringify(users_Original);
             localStorage.setItem('users', users_Original);
+        
+            localStorage.setItem('user_Count', userCount);
+
+            location.replace('./kirish.html');
         }
     }
 })
