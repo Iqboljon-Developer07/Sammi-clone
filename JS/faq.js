@@ -118,12 +118,3 @@ lightIcon.onclick = () =>{
     let night_Check = localStorage.getItem('night_Mode');
     let night_Check_Original = JSON.parse(night_Check);
 }
-// for(let i = 0;i < questionMain.length;i++){
-//     questionMain[i].addEventListener('click',()=>{
-//         for (let j = 0;j < questionMainAdditional.length;j++){
-//             if (j == i){
-//                 questionMainAdditional[j].classList.toggle('card__p2');
-//             }
-//         }
-//     })
-// }
