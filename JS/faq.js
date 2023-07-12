@@ -18,6 +18,32 @@ const plusToX = document.querySelectorAll('.card__title i');
 const navigationContents = document.querySelectorAll('.navigation-content');
 navigationContents[4].classList.add('hello');
 
+const kirishBtn = document.querySelector('.kirish_Btn1');
+let kirishImg = document.querySelector('.kirish-img');
+let confirm = localStorage.getItem('confirm');
+let button = document.querySelector('.buttons');
+kirishImg.onclick = ()=>{
+    button.classList.toggle('buttons2')
+}
+let buttonSettings = document.getElementById('button');
+buttonSettings.onclick = () =>{
+    location.replace('../index/settings.html')
+};
+button2.onclick = () =>{
+    localStorage.removeItem('confirm');
+    location.reload();
+}
+confirm = JSON.parse(confirm);
+console.log(confirm);
+if (confirm == 'tasdiqlandi'){
+    kirishBtn.classList.add('yoq');
+    kirishImg.classList.add('bor');
+}
+else{
+    kirishBtn.classList.add('bor');
+    kirishImg.classList.add('yoq');
+}
+
 for (let i = 0;i < manbaCard.length;i++){
     if (i != 0){
         questionMainAdditional[i].classList.toggle('card__p2');

@@ -11,11 +11,15 @@ const body = document.getElementById('body');
 
 const navigationContents = document.querySelectorAll('.navigation-content');
 
+let kirishBtn = document.querySelector('.kirish_Btn1');
+let kirishImg = document.querySelector('.kirish_img');
+console.log(localStorage.getItem('confirm'));
+
 for(let i = 0;i < navigationContents.length; i++){
-    navigationContents[i].classList.remove('active')
+    navigationContents[i].classList.remove('active');
 }
 Headermenu.onclick = () =>{
-    nav.classList.toggle('show-hide-nav')
+    nav.classList.toggle('show-hide-nav');
 }
 
 nightIcon.onclick = () =>{
@@ -109,6 +113,10 @@ form1.addEventListener('submit', (i)=>{
         formInput2.classList.remove('form-input2-2');
         formWarningText[1].classList.remove('bor');
     }
+
+    let tasdiqlash = 'tasdiqlandi';
+    tasdiqlash = JSON.stringify(tasdiqlash);
+    localStorage.setItem('confirm', tasdiqlash);
 });
 
 let form2Input1 = document.querySelector('.form2-input1');
@@ -118,8 +126,8 @@ let form2Input3 = document.querySelector('.form2-input3');
 const form2WarningText = document.querySelectorAll('.form2-warning-text2-2')
 
 const containerText = document.querySelector('.container-texts');
-let userCount = localStorage.getItem('user_Count');
-userCount = JSON.parse(userCount);
+let userCount2 = localStorage.getItem('user_Count');
+userCount2 = JSON.parse(userCount2);
 
 form2WarningText[0].classList.add('yoq');
 form2.addEventListener('submit',(i)=>{
@@ -161,10 +169,10 @@ form2.addEventListener('submit',(i)=>{
     }
     else{
         if (o == 3) {
-            userCount++;
+            userCount2++;
             let userData = {};
-            userData[`userEmail${userCount}`] = form2Input1.value;
-            userData[`userPassword${userCount}`] = form2Input2.value;
+            userData[`userEmail${userCount2}`] = form2Input1.value;
+            userData[`userPassword${userCount2}`] = form2Input2.value;
 
             form2Input1 = JSON.stringify(form2Input1.value);
             localStorage.setItem('user_Name', form2Input1);
@@ -174,6 +182,11 @@ form2.addEventListener('submit',(i)=>{
             users_Original.push(userData);
             
             alert("Ro'yhatdan o'ttingiz!");
+
+            let tasdiqlash = 'tasdiqlandi';
+            tasdiqlash = JSON.stringify(tasdiqlash);
+            localStorage.setItem('confirm', tasdiqlash);
+            
             form2Input1.value = '';
             form2Input2.value = '';
             form2Input3.value = '';
@@ -183,7 +196,7 @@ form2.addEventListener('submit',(i)=>{
             users_Original = JSON.stringify(users_Original);
             localStorage.setItem('users', users_Original);
         
-            localStorage.setItem('user_Count', userCount);
+            localStorage.setItem('user_Count', userCount2);
 
             location.replace('./kirish.html');
         }

@@ -15,6 +15,33 @@ const mainContainer = document.querySelector('.main-container');
 const courses = document.querySelectorAll('.settings-container');
 let navigations = document.querySelectorAll('.s-c-navigation');
 
+const kirishBtn = document.querySelector('.kirish_Btn1');
+console.log(kirishBtn);
+let kirishImg = document.querySelector('.kirish-img');
+let confirm = localStorage.getItem('confirm');
+let button = document.querySelector('.buttons');
+kirishImg.onclick = ()=>{
+    button.classList.toggle('buttons2')
+}
+let buttonSettings = document.getElementById('button');
+buttonSettings.onclick = () =>{
+    location.replace('../index/settings.html')
+};
+button2.onclick = () =>{
+    localStorage.removeItem('confirm');
+    location.replace('../index.html')
+}
+confirm = JSON.parse(confirm);
+console.log(confirm);
+if (confirm == 'tasdiqlandi'){
+    kirishBtn.classList.add('yoq');
+    kirishImg.classList.add('bor');
+}
+else{
+    kirishBtn.classList.add('bor');
+    kirishImg.classList.add('yoq');
+}
+
 for (let i = 0;i<courses.length;i++){
     navigations[i].addEventListener('click',()=>{
         for (let j = 0; j < courses.length; j++) {
